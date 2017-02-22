@@ -1,15 +1,16 @@
 {
-  "name": "spa-github-pages",
+  "name": "marklb-website",
   "version": "3.0.0",
-  "description": "Single Page Apps for GitHub Pages",
+  "description": "My website",
   "scripts": {
-    "start": "webpack-dev-server -d --inline --host 0.0.0.0 --history-api-fallback --progress"
+    "start": "webpack-dev-server -d --inline --host 0.0.0.0 --history-api-fallback --progress",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/spa-github-pages.git"
+    "url": "git+https://github.com/Marklb/my-website.git"
   },
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "Mark Berry",
   "license": "MIT",
   "dependencies": {
     "jquery": "^3.1.1",
