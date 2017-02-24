@@ -14,6 +14,14 @@
 //   @extend %clearfix;
 // }
 
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 @mixin user-select($t) {
   -webkit-user-select: $t;
   -moz-user-select: $t;
@@ -131,11 +139,23 @@
 //   }
 // }
 
+@mixin transform($args...){
+  -webkit-transform: $args; /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      -ms-transform: $args; /* IE 9 */
+          transform: $args; /* IE 10, Fx 16+, Op 12.1+ */
+}
+
 @mixin background-size($width, $height){
   -webkit-background-size: $width $height;
   -moz-background-size: $width $height;
   -o-background-size: $width $height;
   background-size: $width $height;
+}
+
+@mixin box-shadow($args...){
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
 }
 
 @mixin opacity($opacity) {

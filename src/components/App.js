@@ -3,6 +3,8 @@ import Interactive from 'react-interactive';
 import { Link } from 'react-router';
 // import s from '../styles/app.style';
 
+import NavBar from './NavBar';
+
 import _ from 'lodash';
 
 require('../styles/app.scss');
@@ -41,10 +43,13 @@ function App({ children, routes }) {
 
   return (
       <div className='container'>
-        <div className='header'>
-          <h1 className='title'>Mark Berry</h1>
+        <div className='page-top-header'>
+          <h1 className='page-top-title'>Mark Berry</h1>
         </div>
-        {/* {children} */}
+        <NavBar />
+        <div className='page-content'>
+          {children}
+        </div>
       </div>
     );
 

@@ -1,0 +1,39 @@
+@import './common';
+
+.project-tile{
+  display: block;
+  margin-bottom: 5px;
+
+  &-header{
+    border: 2px solid rgba(20,40,180,0.6);
+    background-color: rgba(40,60,80,0.2);
+    @include box-sizing(border-box);
+    @extend %clearfix;
+
+    &-title{
+      float: left;
+      // border: 2px solid rgba(20,40,180,0.6);
+      border: 2px solid transparent;
+      @include box-sizing(border-box);
+      margin: 2px;
+      margin-left: 0;
+      padding: 1px 4px;
+    }
+
+    &-more{
+      float: right;
+      border: 2px solid rgba(20,40,180,0.6);
+      @include box-sizing(border-box);
+      margin: 2px;
+      padding: 1px 4px;
+    }
+  }
+
+  &-body{
+    border: 2px solid rgba(20,40,180,0.6);
+    border-top: 0;
+    background-color: rgba(40,60,80,0.2);
+    @include box-sizing(border-box);
+    min-height: 30px;
+  }
+}

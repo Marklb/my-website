@@ -33,16 +33,38 @@ body { overflow-x: hidden; }
   font-size: 16px;
   letter-spacing: 0.025em;
 
-  .header{
+  .page-top-header{
     text-align: center;
-    
-    .title{
+
+    .page-top-title{
       @include user-select(none);
-      font-size: 40px;
+      display: inline-block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      // font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+      font-weight: 800px;
+      font-size: 50px;
       // color: rgba(210,210,210,255);
       color: rgba(20,20,100,255);
+      text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8);
+      -webkit-transition: background 0.5s ease;
+              transition: background 0.5s ease;
       justify-content: space-between;
       cursor: default;
+
+      &:hover{
+        text-shadow: 0px 0px 7px rgba(0, 0, 80, 0.8);
+      }
     }
+  }
+
+  .page-content{
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(50,50,80,0.1);
+    // background-color: rgba(40,60,80,0.2);
+    // border: 1px solid whitesmoke;
+    // border: 1px solid rgba(255,255,255,0.5);
+    @include box-sizing(border-box);
   }
 }
