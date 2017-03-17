@@ -1,0 +1,27 @@
+@import './common';
+
+
+.publications {
+
+  .publications-section {
+    margin-bottom: 10px;
+  }
+
+  .publications-section:last-child {
+    margin-bottom: 0px;
+  }
+
+  .publications-info-list-ul {
+    list-style-type: disc;
+    list-style-position: inside;
+
+     > li {
+      font-family: Helvetica;
+      font-size: 12px;
+
+      > .my-name {
+        font-weight: bold;
+      }
+    }
+  }
+}

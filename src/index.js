@@ -5,23 +5,23 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './components/App';
 import Home from './components/Home';
 import Projects from './components/Projects';
+// import Resume from './components/Resume';
+import Publications from './components/Publications';
+import Contact from './components/Contact';
 import PageNotFound from './components/PageNotFound';
-import ExampleComponent from './components/ExampleComponent';
-import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
 
 
 const routes = (
-  <Route path="/" mapMenuTitle="Home" component={App}>
+  <Route path="/" component={App}>
     <IndexRoute component={Home} />
 
-    <Route path="projects" mapMenuTitle="Example" component={Projects}>
+    <Route path="projects" component={Projects}>
+    
     </Route>
+    <Route path="publications" component={Publications} />
+    <Route path="contact" component={Contact} />
 
-    {/* <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
-      <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
-    </Route> */}
-
-    <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
+    <Route path="*" component={PageNotFound} />
   </Route>
 );
 
@@ -33,3 +33,5 @@ render(
   />,
   document.getElementById('root'),
 );
+
+// <Route path="resume" component={Resume} />

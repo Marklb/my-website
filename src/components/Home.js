@@ -1,12 +1,5 @@
-import React, { PropTypes } from 'react';
-import Interactive from 'react-interactive';
-import { Link } from 'react-router';
-// import s from '../styles/navBar.style';
-
-import _ from 'lodash';
-
-require("../styles/home.scss");
-
+import React from 'react';
+import '../styles/home.scss';
 
 /*
 */
@@ -26,73 +19,24 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <div className='home'>
-        <p>Programmer</p>
-        <p>Degree: M.S. Computer Science</p>
+      <div className="home">
+        <div className="home-section">
+          <p>Name: Mark Berry</p>
+        </div>
+
+        <div className="home-section">
+          <p>Degrees: </p>
+          <ul className="home-info-list-ul">
+            <li>M.S. Computer Science, New Jersey Institute of Technology</li>
+            <li>B.S. Computer Science, University of Memphis</li>
+          </ul>
+        </div>
+
+        <div className="home-section home-new-site-notice">
+          <p>Not much information is here as am in the process of remaking this site.</p>
+        </div>
       </div>
     );
   }
 
-  /*
-  Event Callbacks
-  */
-
-
-
-};
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import Interactive from 'react-interactive';
-// import { Link } from 'react-router';
-// import s from '../styles/home.style';
-//
-// function Home() {
-//   const repoReadmeLink = text => (
-//     <Interactive
-//       as="a"
-//       {...s.link}
-//       href="https://github.com/rafrex/spa-github-pages#readme"
-//     >{text}</Interactive>
-//   );
-//
-//   return (
-//     <div>
-//       <p style={s.p}>
-//         This is an example single page app built
-//         with React and React&nbsp;Router using {' '}
-//         {s.code('browserHistory')}. Navigate with the links below and
-//         refresh the page or copy/paste the url to test out the redirect
-//         functionality deployed to overcome GitHub&nbsp;Pages incompatibility
-//         with single page apps (like this one).
-//       </p>
-//       <p style={s.p}>
-//         Please see the {repoReadmeLink('repo readme')} for instructions on how to
-//         use this boilerplate to deploy your own single page app using GitHub Pages.
-//       </p>
-//       <div style={s.pageLinkContainer}>
-//         <Interactive
-//           as={Link}
-//           {...s.link}
-//           to="/example"
-//         >Example page</Interactive>
-//       </div>
-//       <div style={s.pageLinkContainer}>
-//         <Interactive
-//           as={Link}
-//           {...s.link}
-//           to="/example/two-deep?field1=foo&field2=bar#boom!"
-//         >Example two deep with query and hash</Interactive>
-//       </div>
-//     </div>
-//   );
-// }
-//
-// export default Home;
+}

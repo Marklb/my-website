@@ -1,25 +1,19 @@
-import React, { PropTypes } from 'react';
-import Interactive from 'react-interactive';
+import React from 'react';
 import { Link } from 'react-router';
-// import s from '../styles/navBar.style';
-
-import _ from 'lodash';
-
-require("../styles/nav-bar.scss");
+import '../styles/nav-bar.scss';
 
 
 /*
 */
 export default class NavBar extends React.Component {
-  static propTypes = {
-    
-  };
+  static propTypes = {};
 
   static links = [
-    {'text': 'Home', to: '/'},
-    {'text': 'Projects', to: '/projects'},
-    {'text': 'Resume', to: '/resume'},
-    {'text': 'Contact', to: '/contact'},
+    { text: 'Home', to: '/' },
+    { text: 'Projects', to: '/projects' },
+    // { text: 'Resume', to: '/resume' },
+    { text: 'Publications', to: '/publications' },
+    { text: 'Contact', to: '/contact' },
   ];
 
   constructor(props) {
@@ -33,14 +27,11 @@ export default class NavBar extends React.Component {
 
   render() {
     return (
-      <div className='nav-bar'>
-        <div className='nav-buttons'>
-          {NavBar.links.map((link, i) => {
-            return (
-              <Link key={i}
-                to={link.to}
-                onlyActiveOnIndex={true}
-                activeClassName='active'>
+      <div className="nav-bar">
+        <div className="nav-buttons">
+          {NavBar.links.map((link, i) => { return (
+              <Link key={`nav-${link.text}`} to={link.to} onlyActiveOnIndex 
+                activeClassName="active">
                 <span>{link.text}</span>
               </Link>);
           })}
@@ -48,11 +39,5 @@ export default class NavBar extends React.Component {
       </div>
     );
   }
-
-  /*
-  Event Callbacks
-  */
-
-
 
 };

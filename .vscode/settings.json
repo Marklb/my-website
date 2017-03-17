@@ -1,0 +1,11 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  // "editor.formatOnPaste": true,
+  "editor.minimap.enabled": true,
+  "eslint.enable": false,
+
+  "files.associations": {
+    "**/components/*.js": "javascriptreact",
+    "**/containers/*.js": "javascriptreact"
+  }
+}
